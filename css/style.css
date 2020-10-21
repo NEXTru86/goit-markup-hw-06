@@ -543,6 +543,8 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     border-style: none;
     border-radius: 4px;
 
+    cursor: pointer;
+
     transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -678,12 +680,14 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     position: absolute;
     top: 50%;
     left: 50%;
+
+    padding: 40px;
+
     transform: translate(-50%, -50%) scale(1) rotate(360deg);
     transition-property: transform;
     transition-duration: 500ms;
     transition-timing-function: linear;
     
-
     min-width: 528px;
     min-height: 580px;
 
@@ -712,6 +716,110 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 .button-close:hover,
 .button-close:focus {
     fill: #2196F3;
+}
+
+.form {
+    /* display: flex; */
+}
+
+.form-title {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color-white-them);
+}
+
+.form-field {
+    display: block;
+    position: relative;
+
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+}
+
+.form-input,
+.form-comment {
+    margin-top: 4px;
+
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.form-input {
+    padding-top: 11px;
+    padding-right: 12px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+}
+
+.form-icon-svg {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+}
+
+.form-comment {
+    padding: 12px 16px;
+    resize: none;
+}
+
+.form-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+}
+
+.form-checkbox-input-link {
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: var(--accent-text-color);
+}
+
+.bn-send {
+    display: block;
+    padding: 10px 55px;
+    margin: auto;
+
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: var(--text-btn-dark-theme);
+    background: #2196F3;
+    border-radius: 4px;
+    border-style: none;
+
+    cursor: pointer;
 }
 
 /* END MODAL WINDOW */
