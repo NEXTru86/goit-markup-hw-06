@@ -711,15 +711,15 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     border-radius: 50%;
 
     cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close:hover,
 .button-close:focus {
     fill: #2196F3;
-}
-
-.form {
-    /* display: flex; */
 }
 
 .form-title {
@@ -751,9 +751,16 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 
     width: 100%;
 
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.01em;
+
     border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
     border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -767,6 +774,10 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     position: absolute;
     bottom: 11px;
     left: 12px;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-comment {
@@ -775,24 +786,78 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 }
 
 .form-comment::placeholder {
-    font-size: 12px;
-    line-height: 1.167;
+    font-size: 14px;
+    line-height: 1.143;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
 
-.form-checkbox {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 30px;
+.form-input:focus + .form-icon-svg,
+.form-input:hover + .form-icon-svg {
+    fill: var(--accent-text-color);
+}
 
+.form-input:focus,
+.form-input:hover,
+.form-comment:focus,
+.form-comment:hover {
+    border: 1px solid var(--accent-text-color);
+    outline: none;
+}
+
+.form-input:not(:placeholder-shown),
+.form-comment:not(:placeholder-shown) {
+    border: 1px solid var(--accent-text-color);
+    outline: none;
+}
+
+.form-input:not(:placeholder-shown) + .form-icon-svg {
+    fill: var(--accent-text-color);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
 
     cursor: pointer;
+}
+
+.form-checkbox-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+
+.checkbox-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+
+    transition-property: background-color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-checkbox-input:checked + .checkbox-icon {
+    background-color: var(--accent-text-color);
+    background-image: url(../imeges/modal/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent-text-color);
 }
 
 .form-checkbox-input-link {
@@ -815,7 +880,7 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     line-height: 1.875;
     letter-spacing: 0.06em;
     color: var(--text-btn-dark-theme);
-    background: #2196F3;
+    background: var(--accent-text-color);
     border-radius: 4px;
     border-style: none;
 
