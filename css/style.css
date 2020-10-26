@@ -1016,6 +1016,11 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     padding-top: 12px;
 }
 
+.form {
+    display: flex;
+    align-items: flex-end;
+}
+
 .subscription label {
     display: inline-block;
 
@@ -1056,10 +1061,10 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 }
 
 .bn-subscription {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    height: 50px;
     padding: 10px 32px;
-    margin-left: -3.7px;
 
     font-family: var(--main-font);
     font-style: normal;
