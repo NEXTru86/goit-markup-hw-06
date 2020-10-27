@@ -1016,7 +1016,7 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     padding-top: 12px;
 }
 
-.form {
+.subscription__form {
     display: flex;
     align-items: flex-end;
 }
